@@ -1,17 +1,5 @@
 import pandas as pd
 from flask import *
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression, LogisticRegression
-from sklearn.metrics import mean_squared_error, r2_score
-import sklearn.metrics as sm
-from sklearn.preprocessing import StandardScaler
-import matplotlib.pyplot as plt
-from tkinter import ttk
-import pandas_profiling as pp
-from tkinter import *
 import matplotlib 
 matplotlib.use('Agg') 
 
