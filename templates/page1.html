@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo"
+        ><img src="../static/images/ml.png" class="echa_logo"
+      /></a>
+      <nav class="nav-items">
+        <div class="down">
+          <a href="/about">About Us </a>
+          <a href="/preAssessment">Pre-Assessment</a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown_1</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown_2</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+            </div>
+          </div>
+          <a href="./contact">Contact</a>
+        </div>
+
+        <!-- ExpleoLogo -->
+        <img src="../static/images/expleo.png" class="img" />
+      </nav>
+    </header>
+
+    <div>
+      &nbsp;
+      <!-- Blanck space aftr head -->
+    </div>
+    <h2 align="center" style="color: rgb(27, 88, 195)">
+      <b>Data file has been uploaded successfully</b>
+    </h2>
+    <br />
+    <div class="search1" align="center">
+      <div>
+        <form action="#">
+          <button
+            class="button"
+            type="submit"
+            formaction="preview"
+            text-align="center"
+          >
+            Preview Data
+          </button>
+
+          <button
+            class="button"
+            type="submit"
+            formaction="info"
+            text-align="center"
+          >
+            Data info
+          </button>
+          <button
+            class="button"
+            type="submit"
+            formaction="show_describe"
+            text-align="center"
+          >
+            Describe Data
+          </button>
+
+          <button
+            class="button"
+            type="submit"
+            formaction="show_correlation"
+            text-align="center"
+          >
+            Data Correlation
+          </button>
+          <button
+            class="button"
+            type="submit"
+            formaction="visualization"
+            text-align="center"
+          >
+            Data Visualization
+          </button>
+          <button
+            class="button"
+            type="submit"
+            formaction="profiling"
+            text-align="center"
+          >
+            Data Profiling
+          </button>
+
+          <button
+            class="button"
+            type="submit"
+            formaction="imputation"
+            text-align="center"
+          >
+            Data Understanding
+          </button>
+          <button
+            class="button"
+            type="submit"
+            formaction="train"
+            text-align="center"
+          >
+            Train Model
+          </button>
+        </form>
+      </div>
+
+      <p>{{ data_head|safe }}</p>
+      <p>
+        {{ data|safe }} <br />{{total |safe}}<br />
+        {{d_types|safe}}
+      </p>
+      <table>
+        {{data_des|safe}}
+      </table>
+      <p>{{data_corr|safe}}</p>
+      <img src="{{ heatmap }}" />
+    </div>
+    <br /><br />
+
+    <br />
+    <!-- footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(10, 49, 138, 0.797)"
+      >
+        © 2023 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">Expleo.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <script src="../static/search.js"></script>
+  </body>
+</html>
